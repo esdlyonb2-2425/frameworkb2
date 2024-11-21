@@ -1,0 +1,3 @@
+<<<SQL
+CREATE MON SQL;
+SQL;
