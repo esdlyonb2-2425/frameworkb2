@@ -1,0 +1,49 @@
+#!/usr/bin/env php
+<?php
+
+print_r("coucou je suis la console \n");
+//var_dump($argv);
+
+
+switch ($argv[1]) {
+        case "serve":
+            print_r('Your development de server started at http://localhost:8080');
+            shell_exec("php -S localhost:8080 -t public/");
+            break;
+
+    case "make":
+        make($argv[2]);
+        break;
+
+    case "migrate":
+        //récupérer le fichier de migrations
+        //executer
+        break;
+
+    case "talk":
+        $question = readline("tu veux quoi ?");
+        echo "si j'ai bien compris tu veux $question";
+
+}
+
+function make($what){
+
+    switch ($what) {
+
+        case "entity":
+            echo "la tu fais une entity";
+            break;
+
+        case "migration":
+            echo "la tu fais une migration";
+            //supprimer les anciennes migrations
+            //avant la premiere requete SQL
+            //on vide la base de données
+            break;
+
+        case "controller":
+            echo "la tu fais un controller";
+            break;
+
+    }
+}

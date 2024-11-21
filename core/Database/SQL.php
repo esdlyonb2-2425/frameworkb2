@@ -18,8 +18,8 @@ class SQL
         $dbPort = $dotEnv->getVariable("DBPORT");
 
 
-        $username = $dotEnv->getVariable("USERNAME");
-        $password = $dotEnv->getVariable("PASSWORD");
+        $username = $dotEnv->getVariable("DBUSER");
+        $password = $dotEnv->getVariable("DBPASSWORD");
 
 
 
